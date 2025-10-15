@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="mobile-menu-overlay" id="mob-overlay"></div>
+    <div id="mobile-menu">
+        <nav class="main-mobile-menu">
+            <div class="logo-x-mobile">
+                <button class="mobile-title-button" onclick="window.location.reload();">
+                    <span class="mobile-title">Title</span>
+                </button>
+                <button class="close-svg" id="close-menu-button">
+                        <!-- Simple X (uses currentColor, accessible) -->
+                        <svg role="img" aria-label="Close" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <title>Close</title>
+                        <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="6" y1="18" x2="18" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="mobile-links">
+                <a href="#" class="mobile-link">Home</a>
+                <a href="#" class="mobile-link">About</a>
+                <a href="#" class="mobile-link">Services</a>
+                <a href="#" class="mobile-link">Articles</a>
+                <a href="#" class="mobile-contact-link">Contact</a>
+        </nav>
+    </div>
+    <header>
+        <div class="header-bar">
+            <a href="#" class="title-link">Title</a>
+            <nav class="nav-links">
+                <a href="#" class="link">Home</a>
+                <a href="#" class="link">About</a>
+                <a href="#" class="link">Services</a>
+                <a href="#" class="link">Articles</a>
+                <a href="#" class="contact-link">Contact</a>
+            </nav>
+            <button class="menu-button" id="menuButton">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-title-card">Strategic Advisory for Businesses</div>
+            <h1 class="hero-title">Mergers & Acquisitions Experts</h1>
+            <p class="hero-subtitle">Helping founders, investors, and corporate leaders navigate  complex transactions with precision and confidence  from deal strategy and valuation to negotiation and  post-merger integration.</p>
+            <div class="hero-buttons">
+                <button class="call-button">Arrange a Call</button>
+                <button class="learn-button">Learn More</button>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3 class="service-title">Service One</h3>
+                    <p class="service-description">Description of service one.</p>
+                </div>
+                <div class="service-card">
+                    <h3 class="service-title">Service Two</h3>
+                    <p class="service-description">Description of service two.</p>
+                </div>
+                <div class="service-card">
+                    <h3 class="service-title">Service Three</h3>
+                    <p class="service-description">Description of service three.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2 class="section-title">Contact Us</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" class="form-input" required>
+                <input type="email" placeholder="Your Email" class="form-input" required>
+                <textarea placeholder="Your Message" class="form-textarea" required></textarea>
+                <button type="submit" class="form-button">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
