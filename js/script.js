@@ -12,3 +12,26 @@ clostMobMenu.addEventListener('click', () => {
     mobileMenu.classList.toggle('show');
     mobOverlay.classList.toggle('show');
 });
+
+// Hero section animation
+const heroCardsContainer = document.getElementById('hero-container');
+const firstObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        entry.target.classList.add('show');
+    })
+})
+
+firstObserver.observe(heroCardsContainer);
+
+// About Image animation section
+const aboutImage = document.getElementById('about-image');
+const secondObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        console.log(entry);
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    })
+}, {threshold: 0.1})
+
+secondObserver.observe(aboutImage);

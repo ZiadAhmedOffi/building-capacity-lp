@@ -36,7 +36,7 @@
             <a href="#" class="title-link">Title</a>
             <nav class="nav-links">
                 <a href="#" class="link">Home</a>
-                <a href="#" class="link">About</a>
+                <a href="index.html#about" class="link">About</a>
                 <a href="#" class="link">Services</a>
                 <a href="#" class="link">Articles</a>
                 <a href="#" class="contact-link">Contact</a>
@@ -47,42 +47,77 @@
 
     <main>
         <section class="hero-section">
-            <div class="hero-title-card">Strategic Advisory for Businesses</div>
-            <h1 class="hero-title">Mergers & Acquisitions Experts</h1>
-            <p class="hero-subtitle">Helping founders, investors, and corporate leaders navigate  complex transactions with precision and confidence  from deal strategy and valuation to negotiation and  post-merger integration.</p>
-            <div class="hero-buttons">
-                <button class="call-button">Arrange a Call</button>
-                <button class="learn-button">Learn More</button>
-            </div>
-        </section>
-
-        <section class="content-section">
-            <h2 class="section-title">Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3 class="service-title">Service One</h3>
-                    <p class="service-description">Description of service one.</p>
-                </div>
-                <div class="service-card">
-                    <h3 class="service-title">Service Two</h3>
-                    <p class="service-description">Description of service two.</p>
-                </div>
-                <div class="service-card">
-                    <h3 class="service-title">Service Three</h3>
-                    <p class="service-description">Description of service three.</p>
+            <div id="hero-container" class="hero-cards-container">
+                <div class="hero-title-card">Strategic Advisory for Businesses</div>
+                <h1 class="hero-title">Mergers & Acquisitions Experts</h1>
+                <p class="hero-subtitle">Helping founders, investors, and corporate leaders navigate  complex transactions with precision and confidence  from deal strategy and valuation to negotiation and  post-merger integration.</p>
+                <div class="hero-buttons">
+                    <button class="call-button">Arrange a Call</button>
+                    <button class="learn-button">Learn More</button>
                 </div>
             </div>
         </section>
 
-        <section class="contact-section">
-            <h2 class="section-title">Contact Us</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" class="form-input" required>
-                <input type="email" placeholder="Your Email" class="form-input" required>
-                <textarea placeholder="Your Message" class="form-textarea" required></textarea>
-                <button type="submit" class="form-button">Send Message</button>
-            </form>
+        <section class="about-me" id="about">
+            <div class="about-container">
+                <div class="about-text">
+                    <div class="about-title-card">About Me</div>
+                    <div class="about-title">Expert in Capacity Building and M&A</div>
+                    <div class="about-two-cards">
+                        <div class="about-card">
+                            <div class="about-card-logo-title">
+                                <div class="about-card-logo">
+                                    <img src="assets/experienced_investor.png" alt="">
+                                </div>
+                                <span class="about-card-title">Experienced Investor</span>
+                            </div>
+                            <p class="about-card-text">
+                                Backed by over  a decade of experience in corporate finance  and investment advisory, bringing deep insight into capital markets and strategic transactions.
+                            </p>
+                        </div>
+                        <div class="about-card">
+                            <div class="about-card-logo-title">
+                                <div class="about-card-logo">
+                                    <img src="assets/business_strategist.png" alt="">
+                                </div>
+                                <span class="about-card-title">Business Strategist</span>
+                            </div>
+                            <p class="about-card-text">
+                                Experienced in guiding executive teams through critical growth, and  integration phases,  combining analytical insight with practical leadership.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about-two-cards">
+                        <div class="about-card">
+                            <div class="about-card-logo-title">
+                                <div class="about-card-logo">
+                                    <img src="assets/skilled_negotiator.png" alt="">
+                                </div>
+                                <span class="about-card-title">Skilled Negotiator</span>
+                            </div>
+                            <p class="about-card-text">
+                                Expert at leading high-stakes discussions and securing favorable outcomes that balance opportunity, value, and long-term relationships.
+                            </p>
+                        </div>
+                        <div class="about-card">
+                            <div class="about-card-logo-title">
+                                <div class="about-card-logo">
+                                    <img src="assets/financial_analyst.png" alt="">
+                                </div>
+                                <span class="about-card-title">Financial Analyst</span>
+                            </div>
+                            <p class="about-card-text">
+                                Deep expertise in evaluating company performance, and uncovering key value drivers to support informed investment decisions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image" id="about-image">
+                    <img src="assets/business_man_shapes.jpg" alt="">
+                </div>
+            </div>
         </section>
+     
     </main>
 
     <script src="js/script.js"></script>

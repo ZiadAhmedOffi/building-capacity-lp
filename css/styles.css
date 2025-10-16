@@ -6,12 +6,19 @@
     --small-font-color: black;
     --headings-font-color: #496345;
     --offwhite-background: #F3F3F3;
+    --darkwhite-background: #D9D9D9;
     --small-font-family: "Inria Sans", sans-serif;
     --headings-font-family: "Inika", serif;
     --nav-bar-link-font-family: "Instrument Sans", sans-serif;
     --base-font-size: 16px;
     --headings-font-size: 41px;
 }
+
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
 
 /* Inika Font Classes */
 .inika-regular {
@@ -68,10 +75,11 @@
 body{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .header-bar {
-    position: sticky;
+    position: fixed;
     top: 0;
     overflow: hidden;
     display: flex;
@@ -79,8 +87,9 @@ body{
     justify-content: space-between;
     width: 100%;
     padding: 10px 20px;
-    background-color: var(--offwhite-background);
+    background: var(--offwhite-background);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    z-index: 499;
 }
 
 .nav-links {
@@ -135,8 +144,14 @@ body{
     color: #FFFFFF;
 }
 
-.menu-button, #mobile-menu, .mobile-menu-overlay{
+.menu-button, .mobile-menu-overlay{
     display: none;
+}
+
+#mobile-menu{
+    position: fixed;
+    right: -1000px;
+    transition: all 0.4s ease;
 }
 
 @media (max-width: 768px) {
@@ -163,16 +178,20 @@ body{
 
     #mobile-menu.show{
         display: flex;
+        right: 0px;
         flex-direction: column;
         justify-content: space-around;
         background: var(--offwhite-background);
         position: fixed;
         top: 0;
         right: 0;
-        padding-right: 20px;
         z-index: 1000;
         width: auto;
-        height: 70%;
+        height: 90%;
+    }
+
+    .main-mobile-menu{
+        margin: auto;
     }
 
     .logo-x-mobile{
@@ -240,6 +259,11 @@ body{
     }
 }
 
+main {
+    position: absolute;
+    top: 89px;
+}
+
 /* Hero Section Styling */
 .hero-section{
     display: flex;
@@ -247,10 +271,20 @@ body{
     padding-top: 100px;
     padding-bottom: 100px;
     justify-content: space-around;
-    height: fit-content;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/mahmoud_meeting.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: auto;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/mahmoud_meeting_lowres.jpg');
+    background-size: 100% 100%;
+}
+
+.hero-cards-container{
+    position: relative;
+    top: 0;
+    left: -4000px;
+    transition: all 0.5s ease;
+}
+
+.hero-cards-container.show{
+    left: 0;
 }
 
 .hero-title-card{
@@ -327,3 +361,148 @@ body{
     transform: translateY(-3px);
     background: white
 }
+
+@media (max-width: 768px){
+    main{
+        top: 56px;
+        right: 0px;
+        width: 100%;
+    }
+
+    .hero-section{
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        width: 100%;
+        height: auto;
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/mahmoud_meeting_lowres.jpg');
+        background-size: 100% 100%;
+    }
+
+    .hero-title-card{
+        margin: 20px;
+        text-align: center;
+        font-size: 22px;
+        border-radius: 30px
+    }
+
+    .hero-title{
+        margin: 20px;
+        font-size: 40px;
+        flex: 1;
+    }
+
+    .hero-subtitle{
+        margin: 20px;
+        font-size: 18px;
+        width: 90%;
+        padding-bottom: 20px;
+    }
+
+    .hero-buttons{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 0;
+    }
+
+    .hero-buttons button{
+        font-size: 20px;
+    }
+}
+
+
+/* About Section Styling */
+.about-container{
+    background: var(--darkwhite-background);
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+}
+
+.about-text{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-top: 40px;
+    width: 60%;
+}
+
+.about-title-card{
+    background: var(--primary-color);
+    color: white;
+    border-radius: 9999px;
+    width: fit-content;
+    font-size: 30px;
+    font-family: var(--headings-font-family);
+    padding: 10px 20px 10px 20px;
+    margin: 0px 0px 20px 100px;
+}
+
+.about-title{
+    font-family: var(--headings-font-family);
+    color: black;
+    font-size: var(--headings-font-size);
+    margin: 0px 0px 20px 100px;
+    width: 50%;
+}
+
+.about-two-cards{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-left: 100px;
+}
+
+.about-card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px;
+}
+
+.about-card-logo-title{
+    display: flex;
+    flex-direction: row;
+}
+
+.about-card-title{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    font-size: 30px;
+    font-family: var(--headings-font-family);
+    color: var(--headings-font-color);
+    font-weight: 700;
+}
+
+.about-card-image{
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+
+.about-card-text{
+    font-family: var(--small-font-family);
+    color: var(--small-font-color);
+    font-size: 20px;
+    margin: 10px;
+    line-height: 1.5;
+}
+
+.about-image{
+    position: relative;
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: all 0.5s ease;
+    transform: translateX(400px);
+}
+
+.about-image.show{
+    transform: translateX(0);
+}
+
+/* temp fixes (TO REMOVE)*/
