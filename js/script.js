@@ -35,3 +35,16 @@ const secondObserver = new IntersectionObserver((entries) => {
 }, {threshold: 0.1})
 
 secondObserver.observe(aboutImage);
+
+// Services image animation section
+const servicesImage= document.getElementById('services-image');
+const thirdObserver= new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        console.log(entry);
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    })
+})
+
+thirdObserver.observe(servicesImage);
